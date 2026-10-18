@@ -6,6 +6,67 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="page.html">Open Page</a>
+<p id = "para"> this is an important paragraph:)</p>
+<input type="Number" id="num1" placeholder="enter 1st number"> <br>
+
+<input type="Number" id="num2" placeholder="enter 2nd number"> <br>
+
+<button class="btn" id="btn"> CALCULATE </button>
+<script>
+
+let input1 = document.getElementById("num1");
+let input2 = document.getElementById("num2");
+let button = document.getElementById("btn");
+let paragraph = document.getElementById("para");
+
+button.addEventListener("click", function(event) {
+
+    let add = num1 + num2;
+    let sub = num1 - num2;
+    let mul = num1 * num2;
+    let div = num1 / num2;
+    let mod = num1 % num2;
+
+    paragraph.innerHTML =
+        "Addition: " + add + "<br>" +
+        "Subtraction: " + sub + "<br>" +
+        "Multiplication: " + mul + "<br>" +
+        "Division: " + div + "<br>" +
+        "Modulus: " + mod;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const para = document.getElementById("para");
+    console.log(para);
+    para.textContent = "this is a changed paragraph";
+
+    const button = document.querySelector(".btn");
+
+    button.addEventListener("click", function(event) {
+        alert("button clicked");
+    });
+
+    button.addEventListener("mouseover", function(event) {
+        alert("mouse over button");
+    });
+
+    button.addEventListener("keypress", function(event) {
+        alert("key pressed");
+
+    });
+
+</script>
+  
 </body>
 </html>

@@ -305,3 +305,45 @@
 
 </body>
 </html>
+<body>
+<p id = "para"> this is an important paragraph:)</p>
+<input type="number" id="num1" placeholder="enter 1st number"> <br>
+
+<input type="number" id="num2" placeholder="enter 2nd number"> <br>
+
+<button class="btn" id="btn"> CALCULATE </button>
+<script>
+    <body>
+
+<p id="para">This is an important paragraph :)</p>
+
+<input type="number" id="num1" placeholder="Enter 1st number"> <br><br>
+<input type="number" id="num2" placeholder="Enter 2nd number"> <br><br>
+
+<button id="btn">CALCULATE</button>
+
+<script>
+
+document.getElementById("btn").addEventListener("click", function() {
+
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+
+    let add = num1 + num2;
+    let sub = num1 - num2;
+    let mul = num1 * num2;
+    let div = num1 / num2;
+    let mod = num1 % num2;
+
+    document.getElementById("para").innerHTML =
+        "Addition: " + add + "<br>" +
+        "Subtraction: " + sub + "<br>" +
+        "Multiplication: " + mul + "<br>" +
+        "Division: " + div + "<br>" +
+        "Modulus: " + mod;
+
+});
+
+</script>
+
+</body>

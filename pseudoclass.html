@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>All CSS Pseudo Classes - Visual Demo</title>
+
+    <style>
+
+        /* ================================
+           GENERAL STYLING
+           ================================ */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        .box {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+
+        /* ================================
+           1. : 
+           hover 
+           ================================ */
+
+        .hover-btn {
+            /*12px → Top + Bottom
+            25px → Left + Right*/
+            padding: 12px 25px; 
+            border: none;
+            background-color: blue;
+            color: white;
+cursor: pointer;
+        }
+
+        .hover-btn:hover {
+            background-color: yellow;
+            color: black;
+        }
+
+
+        /* ================================
+           2. :focus
+           ================================ */
+
+        .focus-input {
+            padding: 10px;
+            border: 2px solid gray;
+        }
+
+        .focus-input:focus {
+            border: 3px solid blue;
+            background-color: lightblue;
+            outline: none;
+        }
+
+
+        /* ================================
+           3. :active
+           ================================ */
+
+        .active-btn {
+            padding: 12px 25px;
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        .active-btn:active {
+            background-color: red;
+            transform: scale(0.9);
+        }
+
+
+        /* ================================
+           4. :link
+           ================================ */
+
+        .link-demo:link {
+            color: blue;
+        }
+
+
+        /* ================================
+           5. :visited
+           ================================ */
+
+        .link-demo:visited {
+            color: purple;
+        }
+
+
+        /* ================================
+           6. :first-child
+           ================================ */
+
+        .fruits li:first-child {
+            background-color: red;
+            color: white;
+        }
+
+
+        /* ================================
+           7. :last-child
+           ================================ */
+
+        .fruits li:last-child {
+            background-color: green;
+            color: white;
+        }
+
+
+        /* ================================
+           8. :nth-child(2)
+           ================================ */
+
+        .fruits li:nth-child(2) {
+            background-color: orange;
+        }
+
+
+        /* ================================
+           9. :nth-child(odd)
+           ================================ */
+
+        .odd-even li:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+
+        /* ================================
+           10. :nth-child(even)
+           ================================ */
+
+        .odd-even li:nth-child(even) {
+            background-color: lightblue;
+        }
+
+
+        /* ================================
+           11. :lang()
+           ================================ */
+
+        .language:lang(en) {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .language:lang(fr) {
+            color: red;
+            font-weight: bold;
+        }
+
+
+        /* ================================
+           LIST STYLING
+           ================================ */
+
+        li {
+            padding: 8px;
+            margin: 3px;
+            width: 200px;
+        }
+
+        a {
+            font-size: 18px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>CSS Pseudo Classes Visual Demo</h1>
+
+
+    <!-- =====================================
+         HOVER
+         ===================================== -->
+
+    <div class="box">
+
+        <h2>1. :hover</h2>
+
+        <p>
+            Mouse button ke upar le kar jao.
+        </p>
+
+        <button class="hover-btn">
+            Hover Me
+        </button>
+
+    </div>
+
+
+    <!-- =====================================
+         FOCUS
+         ===================================== -->
+
+    <div class="box">
+
+        <h2>2. :focus</h2>
+
+        <p>
+            Input par click karo aur typing karo.
+        </p>
+
+        <input
+            class="focus-input"
+            type="text"
+            placeholder="Click Me">
+
+    </div>
+
+
+    <!-- =====================================
+         ACTIVE
+         ===================================== -->
+
+    <div class="box">
+
+        <h2>3. :active</h2>
+
+        <p>
+            Button ko press karke rakho.
+        </p>
+
+        <button class="active-btn">
+            Press Me
+        </button>
+
+    </div>
+
+
+    <!-- =====================================
+         LINK + VISITED
+         ===================================== -->
+
+    <div class="box">
+
+        <h2>4. :link and :visited</h2>
+
+        <p>
+            Blue = Unvisited<br>
+            Purple = Visited
+        </p>
+
+        <a
+            class="link-demo"
+            href="https://www.google.com"
+            target="_blank">
+
+            Visit Google
+
+        </a>
+
+    </div>
+
+
+    <!-- =====================================
+         FIRST CHILD
+         LAST CHILD
+         NTH CHILD
+         ===================================== -->
+
+    <div class="box">
+
+        <h2>5. :first-child, :last-child, :nth-child()</h2>
+
+        <p>
+            Red = First Child<br>
+            Orange = Second Child<br>
+            Green = Last Child
+        </p>
+
+        <ul class="fruits">
+
+            <li>Apple</li>
+
+            <li>Banana</li>
+
+            <li>Mango</li>
+
+            <li>Orange</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- =====================================
+         ODD AND EVEN
+         ===================================== -->
+
+    <div class="box">
+
+        <h2>6. :nth-child(odd) and :nth-child(even)</h2>
+
+        <p>
+            Gray = Odd Position<br>
+            Light Blue = Even Position
+        </p>
+
+        <ul class="odd-even">
+
+            <li>Item 1 - Odd</li>
+
+            <li>Item 2 - Even</li>
+
+            <li>Item 3 - Odd</li>
+
+            <li>Item 4 - Even</li>
+
+            <li>Item 5 - Odd</li>
+
+            <li>Item 6 - Even</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- =====================================
+         LANG
+         ===================================== -->
+
+    <div class="box">
+
+        <h2>7. :lang()</h2>
+
+        <p class="language" lang="en">
+            Hello! This is English.
+        </p>
+
+        <p class="language" lang="fr">
+            Bonjour! Ceci est français.
+        </p>
+
+    </div>
+
+
+</body>
+
+</html>

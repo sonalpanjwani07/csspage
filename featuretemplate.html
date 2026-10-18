@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: whitesmoke;
+            color: black;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .subtitle {
+            color: blue;
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 8px;
+            width: 260px;
+        }
+
+        .icon-box {
+            font-size: 36px;
+            color: blue;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: dimgray;
+            line-height: 1.5;
+        }
+
+        /* Active Card Style */
+        .feature-card.active {
+            background-color: blue;
+            color: white;
+        }
+
+        .feature-card.active .icon-box,
+        .feature-card.active h3,
+        .feature-card.active p {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <span class="subtitle">OUR FEATURES</span>
+    <h2>Let's Discover Our Techmos Features Charter.</h2>
+    
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="icon-box">&#9827;</div>
+            <h3>IT Consultancy</h3>
+            <p>IT Consultancy Services Nullam facilisis, leo eu ultrices laoreet, arcu nibh facilisis justo, et...</p>
+        </div>
+
+        <div class="feature-card active">
+            <div class="icon-box">&#128039;</div>
+            <h3>App Development</h3>
+            <p>App Development Services Nullam facilisis, leo eu ultrices laoreet, arcu nibh facilisis justo, et...</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon-box">&#9745;</div>
+            <h3>Cyber Security</h3>
+            <p>IT Consultancy Services Nullam facilisis, leo eu ultrices laoreet, arcu nibh facilisis justo, et...</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon-box">&#9673;</div>
+            <h3>Digital Experience</h3>
+            <p>IT Consultancy Services Nullam facilisis, leo eu ultrices laoreet, arcu nibh facilisis justo, et...</p>
+        </div>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.feature-card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', function() {
+                cards.forEach(function(c) {
+                    c.classList.remove('active');
+                });
+                card.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
